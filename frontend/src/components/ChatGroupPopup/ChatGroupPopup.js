@@ -551,32 +551,29 @@ const ChatPopupGroup = ({ index, group }) => {
                     messages?.map((message, index) => {
                         let minDiff = 0;
                         let isSameDay = true;
-                        let latestTime = {};
-                        latestTime = calculateTime(message?.createdAt);
+                        const latestTime = calculateTime(message?.createdAt);
+                        const beforeTime = calculateTime(new Date().toISOString());
+                        if (
+                            latestTime?.year !== beforeTime?.year ||
+                            latestTime?.month !== beforeTime?.month ||
+                            latestTime?.day !== beforeTime?.day
+                        ) {
+                            isSameDay = false;
+                        }
+
                         if (index >= 1) {
                             const date1 = new Date(message?.createdAt);
                             const date2 = new Date(messages[index - 1]?.createdAt);
 
                             const diff = date1 - date2;
                             minDiff = diff / (1000 * 60);
-
-                            if (minDiff >= 10) {
-                                const beforeTime = calculateTime(messages[index - 1]?.createdAt);
-                                if (
-                                    latestTime?.year !== beforeTime?.year ||
-                                    latestTime?.month !== beforeTime?.month ||
-                                    latestTime?.day !== beforeTime?.day
-                                ) {
-                                    isSameDay = false;
-                                }
-                            }
                         }
                         return (
                             <div className={clsx(styles['chat-item'])} key={`chat-${index}`}>
                                 {(index === 0 || minDiff >= 10) && (
                                     <div className="fz-14 text-center mt-4 mb-2">
-                                        {!isSameDay && `${latestTime?.day}/${latestTime?.month}`} {latestTime?.hours}:
-                                        {latestTime?.minutes}
+                                        {latestTime?.hours}:{latestTime?.minutes}{' '}
+                                        {!isSameDay && `${latestTime?.day}/${latestTime?.month}`}
                                     </div>
                                 )}
                                 {message?.senderId !== userInfo?.id &&
