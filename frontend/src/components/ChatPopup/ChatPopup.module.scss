@@ -147,6 +147,15 @@
                     margin-left: 0.8rem;
                 }
             }
+
+            .time-of-last-message {
+                font-size: 1rem;
+                text-align: end;
+                &.message-of-friend {
+                    text-align: start;
+                    padding-left: 3.4rem;
+                }
+            }
         }
     }
 

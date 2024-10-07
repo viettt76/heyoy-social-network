@@ -118,11 +118,17 @@
         overflow-y: auto;
 
         .chat-item {
+            margin-top: 1rem;
             display: flex;
             flex-direction: column;
 
             & + .chat-item {
                 margin-top: 0.2rem;
+            }
+
+            .message-sender-name {
+                font-size: 1.4rem;
+                padding-left: 3.6rem;
             }
 
             .message-wrapper {
@@ -171,6 +177,15 @@
                     font-size: 1.3rem;
                     color: $text-color-gray;
                     margin-left: 0.8rem;
+                }
+            }
+
+            .time-of-last-message {
+                font-size: 1rem;
+                text-align: end;
+                &.message-of-friend {
+                    text-align: start;
+                    padding-left: 3.4rem;
                 }
             }
         }
