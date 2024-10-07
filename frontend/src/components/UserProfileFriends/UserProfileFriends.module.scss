@@ -1,0 +1,28 @@
+.friends-wrapper {
+    max-width: 88rem !important;
+    margin: 0 auto;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+
+    .box-sizing-content {
+        box-sizing: content-box;
+    }
+
+    .friend-wrapper {
+        margin-right: 1rem;
+    }
+}
+
+@media (min-width: 468px) and (max-width: 768px) {
+    .friends-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 468px) {
+    .friends-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

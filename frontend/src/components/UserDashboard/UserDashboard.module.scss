@@ -1,0 +1,50 @@
+@import '~/styles/variables';
+
+.dashboard-wrapper {
+    display: none;
+    position: fixed;
+    top: 5.4rem;
+    right: 2.6rem;
+    font-size: 1.6rem;
+    width: 36rem;
+    box-shadow: 0 0 0.6rem 0 $box-shadow;
+    background-color: #fff;
+    padding: 0.8rem 0.8rem;
+    border-radius: 0.8rem;
+
+    &.show {
+        display: block;
+    }
+
+    .dashboard-item {
+        padding: 0.8rem 0.8rem;
+        border-radius: 0.8rem;
+
+        &:hover {
+            background-color: $background-color-medium-gray;
+            cursor: pointer;
+        }
+
+        .dashboard-link {
+            color: $text;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+
+            .dashboard-link-icon {
+                display: block;
+                margin-right: 0.6rem;
+                font-size: 2rem;
+                color: $main-color;
+            }
+
+            .dashboard-avatar {
+                width: 4rem;
+                height: 4rem;
+                border-radius: 50%;
+                border: 0.1rem solid $border;
+                margin-right: 0.6rem;
+            }
+        }
+    }
+}

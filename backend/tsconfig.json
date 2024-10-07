@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "outDir": "./src/entity",
+    "rootDir": "./src/entityTs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false
+  },
+  "include": ["src/entityTs/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}

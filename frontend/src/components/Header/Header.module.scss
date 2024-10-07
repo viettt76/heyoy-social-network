@@ -1,0 +1,56 @@
+@import '~/styles/variables';
+
+.header {
+    padding: 0.8rem 2.6rem 0.8rem 1.6rem;
+    box-shadow: 0 0 0.4rem 0 #d8d3d3;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 999;
+
+    .logo {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .search-wrapper {
+        margin-left: 1rem;
+        padding: 0 1.2rem;
+        border-radius: 3rem;
+        border: none;
+        background-color: $background-color-medium-gray;
+
+        .search-icon {
+            font-size: 1.6rem;
+        }
+        .search-input {
+            border: none;
+            outline: none;
+            background-color: $background-color-medium-gray;
+        }
+    }
+
+    .action-user {
+        border-radius: 50%;
+        background-color: $background-color-medium-gray;
+        width: 4rem;
+        height: 4rem;
+        cursor: pointer;
+        margin-left: 1.2rem;
+
+        .action-user-icon {
+            width: 2.1rem;
+            user-select: none;
+        }
+    }
+}
+
+@media (max-width: 739px) {
+    .header {
+        .search-wrapper {
+            .search-input {
+                display: none;
+            }
+        }
+    }
+}

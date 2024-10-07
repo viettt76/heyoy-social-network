@@ -1,0 +1,18 @@
+@use '~/styles/variables' as *;
+
+.photos-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 88rem !important;
+    gap: 1rem;
+    margin-bottom: 3rem;
+
+    .photo {
+        width: 100%;
+        aspect-ratio: 1;
+        border: 1px solid $border;
+        border-radius: 1rem;
+        cursor: pointer;
+        object-fit: cover;
+    }
+}

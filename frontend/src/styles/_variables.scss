@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src: url('~/assets/fonts/BeVietnamPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-size: normal;
+}
+
+@font-face {
+    font-family: 'BeVietnamPro';
+    src: url('../assets/fonts/BeVietnamPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BeVietnamPro';
+    src: url('../assets/fonts/BeVietnamPro-SemiBold.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BeVietnamPro';
+    src: url('../assets/fonts/BeVietnamPro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+$text: #050505;
+// $font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+$font-family: 'Be Vietnam Pro', system-ui;
+$text-color-gray: #65676b;
+$main-color: rgb(8, 102, 255);
+
+$background-color-greyish: #f8f9fa;
+$background-color-medium-gray: #f1f2f6;
+$background-color-gray: #ebebeb;
+$background-color-dark-gray: #e4e6eb;
+
+$box-shadow: #d8d3d3;
+$border: #dadde1;

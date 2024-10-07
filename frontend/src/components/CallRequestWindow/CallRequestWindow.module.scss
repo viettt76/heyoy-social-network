@@ -1,0 +1,55 @@
+.call-notification {
+    position: fixed;
+    top: 0;
+    z-index: 9999999;
+    // width: 50rem;
+    right: 31.3%;
+    left: 29.3%;
+    border-bottom-left-radius: 1.4rem;
+    border-bottom-right-radius: 1.4rem;
+    background-color: rgba(27, 23, 23, 0.5);
+    padding: 1.6rem 2rem;
+
+    .call-notification-avatar {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+    }
+
+    .call-notification-name {
+        font-size: 2rem;
+        color: #fff;
+        margin-left: 1.6rem;
+    }
+
+    .call-notification-btn {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        & + .call-notification-btn {
+            margin-left: 2rem;
+        }
+
+        &.call-notification-btn__accept {
+            background-color: #32cb45;
+        }
+
+        &.call-notification-btn__refuse {
+            background-color: #ff3a32;
+        }
+
+        &.call-notification-btn__cancel {
+            background-color: #ff3a32;
+        }
+
+        .call-notification-btn-icon {
+            font-size: 2rem;
+            color: #fff;
+        }
+    }
+}
