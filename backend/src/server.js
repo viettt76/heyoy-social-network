@@ -13,9 +13,12 @@ require('events').EventEmitter.prototype._maxListeners = 100;
 const { createClient } = require('redis');
 require('express-async-errors');
 const path = require('path');
+const job = require('./cron/cron');
 
 AppDataSource.initialize()
   .then(async () => {
+    job.start();
+
     const port = process.env.PORT || 8080;
     const app = express();
 
